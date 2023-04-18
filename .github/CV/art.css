@@ -1,0 +1,272 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* @mixin模組化 */
+html, body {
+  margin: 0 auto;
+  padding: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFCC71;
+  color: #213B8D;
+  box-sizing: border-box;
+  font-family: "Roboto", "Noto Sans TC";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2%;
+}
+
+h2::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 4px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #213B8D, #FFCC71);
+  margin-left: 2%;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 700;
+  opacity: 0.7;
+  margin-top: 8%;
+}
+
+a {
+  color: initial;
+  text-decoration: initial;
+}
+
+.resume {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  border: solid 4px #213B8D;
+  border-radius: 50px;
+  padding: 2%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  position: relative;
+}
+.resume:hover {
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+  transform: translate(-2px, -2px);
+}
+
+.deco {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(-60deg, #213B8D, #FFCC71);
+}
+
+.info {
+  text-align: center;
+  border: solid 1px #213B8D;
+  border-radius: 200px 200px 50px 50px;
+  padding: 2%;
+  background-color: #fff1d7;
+  box-shadow: 8px 8px 0;
+  position: relative;
+}
+
+.avator {
+  margin: 0 auto;
+  border: solid 1px #213B8D;
+  width: 24vmin;
+  height: 24vmin;
+  border-radius: 50%;
+}
+
+.jobPosition {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #ffba3e;
+  margin: 4% 0;
+  padding: 4%;
+}
+
+ul.contact {
+  margin: 16% 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+a.btn {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  border-radius: 200px;
+  margin-top: 16%;
+  padding: 8%;
+  transition: 0.5s;
+}
+a.btn:hover {
+  background-color: #333333;
+}
+
+.bgBlock {
+  width: 32.3333%;
+  margin-left: 4%;
+}
+
+.skillsTotal {
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.skillsTotal .block {
+  width: 50%;
+  margin-right: 2%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.list li {
+  box-sizing: border-box;
+  width: 20%;
+  padding: 1%;
+  margin-right: 4%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.listSummary li {
+  border: solid 0.85px #213B8D;
+}
+
+.listSkill li {
+  font-weight: 500;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-120deg, #213B8D, #FFCC71);
+  color: #FFCC71;
+}
+
+.year {
+  margin-bottom: 8%;
+}
+.year h4 {
+  margin-top: 0;
+}
+
+.exp {
+  border-left: solid 4px #213B8D;
+  margin-top: 1%;
+  padding-left: 3%;
+}
+
+@media screen and (max-width: 992px) {
+  .resume {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .info {
+    width: 100%;
+    border-radius: 40px;
+    margin-bottom: 2%;
+    box-shadow: 0 8px 0;
+  }
+
+  .bgBlock {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .deco {
+    display: none;
+  }
+
+  ul.contact {
+    margin: 8% 0;
+  }
+
+  a.btn {
+    font-size: 1.2rem;
+    margin-top: 8%;
+    padding: 4%;
+    position: absolute;
+    bottom: -8%;
+    left: 45%;
+  }
+
+  .brief {
+    padding: 0 2%;
+  }
+
+  .exp {
+    border: none;
+  }
+
+  .list {
+    justify-content: center;
+  }
+
+  .skillsTotal {
+    flex-wrap: wrap;
+  }
+  .skillsTotal .block {
+    width: 100%;
+  }
+
+  .listSkill li {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .listSummary li {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .info {
+    margin-bottom: 8%;
+  }
+
+  .avator {
+    width: 40vmin;
+    height: 40vmin;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  ul.contact {
+    margin: 12% 0;
+  }
+}
